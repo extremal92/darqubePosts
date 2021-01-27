@@ -4,10 +4,6 @@ export const setLoadet = (payload) => ({
     type: 'SET_LOADED',
     payload,
 })
-// export const setMark = (itemsObj) => ({
-//     type: 'SET_MARK',
-//     payload: itemsObj,
-// });
 
 export const fetchBooks = () => (dispatch) => {
     dispatch(setLoadet(false));
