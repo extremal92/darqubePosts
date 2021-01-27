@@ -1,0 +1,29 @@
+@import "variables";
+@import "libs/normalize";
+@import "components/header";
+@import "components/home";
+@import "components/pagination";
+@import "components/modal";
+@import "components/search";
+@import "components/bookmarks";
+
+
+
+#root{
+    background-color: $site-color;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    max-width: 1380px!important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: 100vh;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}

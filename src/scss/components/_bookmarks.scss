@@ -1,0 +1,58 @@
+@import '../variables';
+
+.bookmarks-title{
+    color: white;
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: bold;
+    span{
+        color: $white;
+    }
+}
+.favorite{
+    .news__list{
+        max-width: 100%!important;
+        width: 100%!important;
+        padding-bottom: 100px;
+        &-item{
+            margin: 25px auto!important;;
+        }
+    }
+    &__top{
+        margin: 10px 0 20px 0;
+    }
+    &__clear{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+            color: white;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    }
+    &-back{
+        color: $white;
+        font-size: 20px;
+        text-align: center;
+        padding: 40px 0;
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                margin-right: 15px;
+            }
+            span, i{
+                color: $white;
+            }
+        }
+    }
+    &__empty {
+        margin: 50px 0;
+        h1{
+            color: $white;
+            text-align: center;
+        }
+    }
+}

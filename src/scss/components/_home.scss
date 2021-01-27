@@ -1,0 +1,124 @@
+@import '../variables';
+
+.news{
+    &-block{
+        display: flex;
+    }
+    &__item{
+        &-main{
+            .news__list-item{
+                width: 480px;
+                max-width: 480px;
+                height: 630px;
+                border-radius: 5px;
+                padding: 30px;
+                margin-left: 0;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: calc(100% - 480px);
+        &-item{
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            height: 420px;
+            margin: 0 0 25px 25px;
+            overflow: hidden;
+            max-width: 280px;
+            width: 100%;
+            padding: 25px;
+            &_related{
+                height: 30px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                span{
+                    text-transform: capitalize;
+                    border: 2px solid $white;
+                    padding: 3px 15px;
+                    border-radius: 50px;
+                    color: $white;
+                }
+            }
+            &_title{
+                width: 100%;
+                height: calc(100% - 80px);
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                &-text{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $white;
+                }
+            }
+            &_summary{
+                width: 100%;
+                font-size: 15px;
+                font-weight: 500;
+                .LinesEllipsis{
+                    margin-top: 25px;
+                    color: $white;
+                }
+                .LinesEllipsis-ellipsis span{
+                    color: $white;
+                }
+            }
+            &_bottom{
+                display: flex;
+                justify-content: space-between;
+                height: 50px;
+                align-items: flex-end;
+            }
+            &_date{
+                padding-right: 15px;
+                border-right: 1px solid #4243436b;
+                height: 30px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 14px;
+                color: $white;
+            }
+            &_source{
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                span{
+                    color:#424343;
+                }
+            }
+            &_buttons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                a, button{
+                    position: relative;
+                    width: 20px;
+                    height: 30px;
+                    margin-left: 5px;
+                    outline: none;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    color:#424343;
+                    font-size: 18px;
+                    transition: ease-in-out .3s;
+                    &:hover{
+                        color: $site-color-two;
+                    }
+                }
+            }
+        }
+    }
+}

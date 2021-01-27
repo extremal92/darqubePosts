@@ -1,0 +1,23 @@
+.header__main{
+    display: flex;
+    justify-content: space-between;
+}
+.navList{
+    display: flex;
+    height: 90px;
+    margin: 0;
+    align-items: center;
+    &__item{
+        margin: 0 15px 0 0;
+        font-size: 20px;
+        font-weight: bold;
+        a span{
+            color: $white;
+            opacity: 0.5;
+        }
+        a.active span{
+            color: $white;
+            opacity: 1;
+        }
+    }
+}

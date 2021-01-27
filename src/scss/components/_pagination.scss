@@ -1,0 +1,48 @@
+@import '../variables';
+
+.pagination{
+    width: 100%;
+    margin: 5px 0 100px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__position{
+        font-size: 15px;
+        span{
+            color: white;
+        }
+        &-opasity{
+            opacity: 0.5;
+        }
+    }
+    &__list{
+        display: flex;
+        &-item{
+            &_btn{
+                width: 120px;
+                height: 27px;
+                font-size: 14px;
+                font-weight: bold;
+                color: $white;
+                background-color: #424343;
+                border-radius: 50px;
+                border: 1px solid transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                transition: ease-in-out .3s;
+                cursor: pointer;
+                &:hover{
+                    color: $site-color-two;
+                }
+            }
+            
+            &_btn.disabled{
+                color: $white!important;
+                cursor: default;
+                opacity: 0.5;
+            }
+        }
+    }
+}
