@@ -34,42 +34,41 @@ function Home () {
       dispatch(removeFavoriteItem(id));
     }
   };
-  
-
-  return(
+  if (isLoaded) {
+    return(
       <div className="news">
-        { isLoaded ? 
-          <div className="news-block">
-            <div className="news__item-main">
-              <PostBlock
-                onRemove={onRemoveItem}
-                onClickAddPost={handleAddPostToFavorite}
-                key={items[0].id}
-                {...items[0]}
-              />
-            </div>
-            <div className="news__list">
-              {productDataList.map((obj, index) => {
-                return (
-                  <PostBlock
-                    onRemove={onRemoveItem}
-                    onClickAddPost={handleAddPostToFavorite}
-                    key={obj.id}
-                    mark={false}
-                    {...obj}
-                  />
-                );
-              })}
-              <Pagination
-                pageSize={6}
-                items={items}
-                onChangePage={onChangePage}
-              />
-            </div>
+        <div className="news-block">
+          <div className="news__item-main">
+            <PostBlock
+              onRemove={onRemoveItem}
+              onClickAddPost={handleAddPostToFavorite}
+              key={items[0].id}
+              {...items[0]}
+            />
           </div>
-        : <LoaderNew/>}
+          <div className="news__list">
+            {productDataList.map((obj, index) => {
+              return (
+                <PostBlock
+                  onRemove={onRemoveItem}
+                  onClickAddPost={handleAddPostToFavorite}
+                  key={obj.id}
+                  mark={false}
+                  {...obj}
+                />
+              );
+            })}
+            <Pagination
+              pageSize={6}
+              items={items}
+              onChangePage={onChangePage}
+            />
+          </div>
+        </div>
       </div>
-  )
+    )
+  }
+  return <div className="news"><LoaderNew/></div>;
 }
 
 export default Home;

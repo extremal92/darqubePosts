@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import booksReducer from './books';
+import books from './books';
 import favorite from './favorite';
 
 
 const rootReducer = combineReducers({
-  books: booksReducer,
+  books,
   favorite
 })
 

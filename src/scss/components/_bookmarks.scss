@@ -25,7 +25,13 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        span{
+        button{
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        span, i{
             color: white;
             margin-left: 10px;
             font-weight: bold;

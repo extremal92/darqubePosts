@@ -37,7 +37,7 @@ const favorite = (state = initialState, action) => {
       return { items: {} };
 
     default:
-      return state;
+      return {...state};
   }
 };
 

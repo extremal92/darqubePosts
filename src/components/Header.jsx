@@ -14,12 +14,12 @@ function Header () {
                 </NavLink>
               </li>
               <li className='navList__item'>
-                <NavLink to="/marks" className='navList__item-link' exact activeClassName="active">
+                <NavLink to="/marks" className='navList__item-link' activeClassName="active">
                   <span>BookMarks</span> 
                 </NavLink>
               </li>
               <li className='navList__item'>
-                <NavLink to="/search" className='navList__item-link' exact activeClassName="active">
+                <NavLink to="/search" className='navList__item-link' activeClassName="active">
                   <span>SearchPage</span> 
                 </NavLink>
               </li>

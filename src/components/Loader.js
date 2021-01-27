@@ -1,8 +1,8 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
 
-export default class LoaderNew extends React.Component {
-   render() {
+function LoaderNew () {  
+
     return(
         <div className='loading'>
             <Loader
@@ -12,6 +12,7 @@ export default class LoaderNew extends React.Component {
                 width={100}
             />
         </div>
-    );
-   }
-}
+    )
+  }
+  
+  export default LoaderNew;
