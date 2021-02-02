@@ -146,6 +146,37 @@
                     }
                 }
             }
+            &_latestbtn{
+                height: 30px;
+                display: flex;
+                align-items: center;
+                padding-right: 15px;
+                border-right: 1px solid #4243436b;
+                button{
+                    border: none;
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        width: 19px;
+                        height: 19px;
+                        border-radius: 10px;
+                        border: 1px solid #4243436b;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 7px;
+                        color: #4243436b;
+                        padding-top: 2px;
+                        font-size: 10px;
+                    }
+                    span{
+                        color: $white;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 }
