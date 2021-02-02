@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import { Search } from '.';
 
 function Header () {
     return(
@@ -18,11 +17,11 @@ function Header () {
                   <span>BookMarks</span> 
                 </NavLink>
               </li>
-              <li className='navList__item'>
+              {/* <li className='navList__item'>
                 <NavLink to="/search" className='navList__item-link' activeClassName="active">
                   <span>SearchPage</span> 
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <div className="header__main-search">
               {/* <Search/> */}

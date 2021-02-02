@@ -5,7 +5,7 @@ import LinesEllipsis from "react-lines-ellipsis";
 import moment from "moment";
 import Popup from "reactjs-popup";
 
-function PostBlock({ headline, related, image, summary, category, datetime, id, source, url, mark, onClickAddPost, onRemove }) {
+function PostBlock({ headline, related, image, summary, category, datetime, id, source, url, mark, onClickAddPost, onRemove, latest }) {
 
     const { items } = useSelector(({ favorite }) => favorite);
 
@@ -31,6 +31,11 @@ function PostBlock({ headline, related, image, summary, category, datetime, id, 
   
     return (
         <div className="news__list-item" style={{backgroundImage: `url(${image})`}}>
+            {latest ? 
+                <div className="news__list-item_latest">
+                    <span>LATEST NEWS</span>
+                </div>
+            : null }
             <div className="news__list-item_related">
                 <span>{related}</span>
             </div>
@@ -47,6 +52,14 @@ function PostBlock({ headline, related, image, summary, category, datetime, id, 
                 </div>
             </div>
             <div className="news__list-item_bottom">
+                {latest ? 
+                    <div className="news__list-item_latestbtn">
+                        <button>
+                            <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <span>Read the search</span>
+                        </button>
+                    </div>
+                : null }
                 <div className="news__list-item_date">
                     <span>{moment(datetime).format("DD MMM")}</span>
                 </div>

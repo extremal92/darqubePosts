@@ -30,9 +30,7 @@ function Home () {
     });
   };
   const onRemoveItem = (id) => {
-    if (window.confirm('Are you sure you want to delete?')) {
       dispatch(removeFavoriteItem(id));
-    }
   };
   if (isLoaded) {
     return(
@@ -44,6 +42,7 @@ function Home () {
               onClickAddPost={handleAddPostToFavorite}
               key={items[0].id}
               {...items[0]}
+              latest={true}
             />
           </div>
           <div className="news__list">
